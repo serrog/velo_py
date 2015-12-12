@@ -1,3 +1,17 @@
 from django.contrib import admin
+from orders.models import Order, Worker, Job
 
-# Register your models here.
+class JobInline(admin.TabularInline):
+    model = Job
+
+class OrderAdmin(admin.ModelAdmin):
+    inlines = [JobInline, ]
+    search_fields = ['name', ]
+
+
+class WorkerAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Order, OrderAdmin)
+
+admin.site.register(Worker, WorkerAdmin)
