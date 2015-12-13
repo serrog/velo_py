@@ -127,3 +127,10 @@ try:
     from local_settings import *
 except ImportError:
     print "Achtung! Local_settings are not defined!"
+
+
+# add pythonanywhere settings if running on pythinanywhere
+try:
+    from py_any_settings import *
+except ImportError:
+    print "Achtung! py_any_settings are not defined!"
