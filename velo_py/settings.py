@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'j23-v2_-oj(day^f9ua*$$%jsri=n!(#4t-du6=t@9ghv%&8cv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -123,7 +123,7 @@ STATIC_URL = '/static/'
 
 
 # add local settings if running on local computer
-#try:
-#    from local_settings import *
-#except ImportError:
-#    print "Achtung! Local_settings are not defined!"
+try:
+    from local_settings import *
+except ImportError:
+    print "Achtung! Local_settings are not defined!"
